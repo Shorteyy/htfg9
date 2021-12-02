@@ -38,7 +38,13 @@ explore: financial_status {}
 
 explore: locations {}
 
-explore: people {}
+explore: people {
+  join: taxis {
+    type: left_outer
+    sql_on: ${people.id} = ${taxis.id} ;;
+    relationship: many_to_one
+  }
+}
 
 explore: gender {}
 
