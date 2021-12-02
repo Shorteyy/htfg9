@@ -39,11 +39,7 @@ explore: financial_status {}
 explore: locations {}
 
 explore: people {
-  join: taxis {
-    type: left_outer
-    sql_on: ${people.id} = ${taxis.id} ;;
-    relationship: many_to_one
-  }
+
 }
 
 explore: gender {}
@@ -69,5 +65,10 @@ explore: taxi_rides {
     type: left_outer
     sql_on: ${taxi_rides.taxi_id} = ${taxis.id} ;;
     relationship: many_to_one
+  }
+  join: people {
+    type: inner
+    sql_on: ${people.id} = ${taxis.id} ;;
+    relationship: one_to_many
   }
 }
