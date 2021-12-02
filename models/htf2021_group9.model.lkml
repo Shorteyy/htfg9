@@ -68,7 +68,7 @@ explore: taxi_rides {
   }
   join: people {
     type: inner
-    sql_on: ${people.id} = ${taxis.id} ;;
+    sql_on: ${people.id} = ${taxi_rides.taxi_id} ;;
     relationship: one_to_many
   }
 }
