@@ -26,4 +26,14 @@ view: energy_sources {
     type: count
     drill_fields: []
   }
+
+  measure: renewable_sources {
+    type:  sum
+    sql: ${renewable} ;;
+  }
+
+  measure: fossil_sources{
+    type:  sum
+    sql:  ${fossil_fuels} ;;
+  }
 }

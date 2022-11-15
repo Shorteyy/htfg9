@@ -23,4 +23,6 @@ view: countries {
     type: count
     drill_fields: [id, leader_name, name]
   }
+
+
 }

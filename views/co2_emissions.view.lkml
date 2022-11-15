@@ -21,4 +21,39 @@ view: co2_emissions {
     type: count
     drill_fields: []
   }
+
+  measure: america {
+    type: sum
+    filters: [countries.name: "United States"]
+    sql: ${metricton_per_citizen};;
+
+  }
+
+  measure: france{
+    type: sum
+    filters: [countries.name: "France"]
+    sql: ${metricton_per_citizen} ;;
+
+  }
+
+  measure: russia {
+    type: sum
+    filters: [countries.name: "Russia"]
+    sql: ${metricton_per_citizen} ;;
+
+  }
+
+  measure: finland{
+    type: sum
+    filters: [countries.name: "Finland"]
+    sql: ${metricton_per_citizen} ;;
+
+  }
+
+  measure: canada {
+    type: sum
+    filters: [countries.name: "Canada"]
+    sql: ${metricton_per_citizen} ;;
+
+  }
 }
